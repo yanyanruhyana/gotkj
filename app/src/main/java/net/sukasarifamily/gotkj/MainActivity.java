@@ -27,24 +27,24 @@ public class MainActivity extends AppCompatActivity {
         btntunai.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                int j = Integer.parseInt(txtjarak.getText().toString());
-                int h = Integer.parseInt(txtharga.getText().toString());
-                int t = Integer.parseInt(txttip.getText().toString());
-                int jumlah = (j * h) + t;
+                int j1 = Integer.parseInt(txtjarak.getText().toString());
+                int h1 = Integer.parseInt(txtharga.getText().toString());
+                int t1 = Integer.parseInt(txttip.getText().toString());
+                int jumlah = ((j1 * h1) + t1);
+                tvhasil.setText(String.valueOf(jumlah));
+            }
+        });
+        btnvoucher.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                int j2 = Integer.parseInt(txtjarak.getText().toString());
+                int h2 = Integer.parseInt(txtharga.getText().toString());
+                int t2 = Integer.parseInt(txttip.getText().toString());
+                int jumlah = ((j2 * h2)*10/100) + t2;
                 tvhasil.setText(String.valueOf(jumlah));
             }
         });
 
-        btnvoucher.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                int j = Integer.parseInt(txtjarak.getText().toString());
-                int h = Integer.parseInt(txtharga.getText().toString());
-                int t = Integer.parseInt(txttip.getText().toString());
-                int jumlah = ((j * h)*10/100) + t;
-                tvhasil.setText(String.valueOf(jumlah));
-            }
-        });
 
     }
 }
