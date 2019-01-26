@@ -24,8 +24,10 @@
         android:layout_marginLeft="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintRight_toLeftOf="@id/txjarak"
-        app:layout_constraintStart_toEndOf="@+id/txjarak"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@id/txjarak"
+        app:layout_constraintTop_toTopOf="parent"
+        android:inputType="text"
+        android:hint="Masukan Jarak"/>
 
     <TextView
         android:id="@+id/txharga"
@@ -45,8 +47,9 @@
         android:layout_marginLeft="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintRight_toLeftOf="@id/txharga"
-        app:layout_constraintStart_toEndOf="@+id/txharga"
-        app:layout_constraintTop_toBottomOf="@id/txtjarak" />
+        app:layout_constraintStart_toEndOf="@id/txharga"
+        app:layout_constraintTop_toBottomOf="@id/txtjarak"
+        android:hint="Masukan Harga"/>
 
     <TextView
         android:id="@+id/txtip"
@@ -64,19 +67,21 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
+        android:text="0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintRight_toLeftOf="@id/txtip"
-        app:layout_constraintStart_toEndOf="@+id/txtip"
+        app:layout_constraintStart_toEndOf="@id/txtip"
         app:layout_constraintTop_toBottomOf="@id/txtharga" />
+
 
     <ImageView
         android:id="@+id/gambar"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="8dp"
-        android:src="@drawable/jaringan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txttip"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txttip" />
+        android:src="@drawable/bike" />
 
     <Button
         android:id="@+id/btntunai"

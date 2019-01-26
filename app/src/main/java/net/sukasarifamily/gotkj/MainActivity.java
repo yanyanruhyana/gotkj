@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    EditText txtjarak, txtharga, txttip;
+    EditText txtjarak, txttip, txtharga;
     TextView tvhasil;
     Button btntunai, btnvoucher;
 
@@ -27,21 +27,21 @@ public class MainActivity extends AppCompatActivity {
         btntunai.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                int j1 = Integer.parseInt(txtjarak.getText().toString());
-                int h1 = Integer.parseInt(txtharga.getText().toString());
-                int t1 = Integer.parseInt(txttip.getText().toString());
-                int jumlah = ((j1 * h1) + t1);
-                tvhasil.setText(String.valueOf(jumlah));
+                int j = Integer.parseInt(txtjarak.getText().toString());
+                int h = Integer.parseInt(txtharga.getText().toString());
+                int t = Integer.parseInt(txttip.getText().toString());
+                int tunai = j*h+t;
+                tvhasil.setText(String.valueOf(tunai));
             }
         });
         btnvoucher.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                int j2 = Integer.parseInt(txtjarak.getText().toString());
-                int h2 = Integer.parseInt(txtharga.getText().toString());
-                int t2 = Integer.parseInt(txttip.getText().toString());
-                int jumlah = ((j2 * h2)*10/100) + t2;
-                tvhasil.setText(String.valueOf(jumlah));
+                int j = Integer.parseInt(txtjarak.getText().toString());
+                int h = Integer.parseInt(txtharga.getText().toString());
+                int t = Integer.parseInt(txttip.getText().toString());
+                int voucher =( j*h-((j*h)*10/100) )+t;
+                tvhasil.setText(String.valueOf(voucher));
             }
         });
 
