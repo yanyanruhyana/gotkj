@@ -49,7 +49,8 @@
         app:layout_constraintRight_toLeftOf="@id/txharga"
         app:layout_constraintStart_toEndOf="@id/txharga"
         app:layout_constraintTop_toBottomOf="@id/txtjarak"
-        android:hint="Masukan Harga"/>
+        android:hint="Masukan Harga"
+        android:inputType="text"/>
 
     <TextView
         android:id="@+id/txtip"
@@ -71,7 +72,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintRight_toLeftOf="@id/txtip"
         app:layout_constraintStart_toEndOf="@id/txtip"
-        app:layout_constraintTop_toBottomOf="@id/txtharga" />
+        app:layout_constraintTop_toBottomOf="@id/txtharga"
+        android:inputType="text"/>
 
 
     <ImageView
