@@ -30,13 +30,6 @@ public class MainActivity extends AppCompatActivity {
                 int j = Integer.parseInt(txtjarak.getText().toString());
                 int h = Integer.parseInt(txtharga.getText().toString());
                 int t = Integer.parseInt(txttip.getText().toString());
-                if (txtjarak.getText().toString().isEmpty()){
-                    txtjarak.setText("0");
-                } else if (txtharga.getText().toString().isEmpty()) {
-                    txtharga.setText("0");
-                } else if (txttip.getText().toString().isEmpty()) {
-                    txttip.setText("0");
-                }
                 int tunai = j*h+t;
                 tvhasil.setText(String.valueOf(tunai));
             }
@@ -47,13 +40,6 @@ public class MainActivity extends AppCompatActivity {
                 int j = Integer.parseInt(txtjarak.getText().toString());
                 int h = Integer.parseInt(txtharga.getText().toString());
                 int t = Integer.parseInt(txttip.getText().toString());
-                if (txtjarak.getText().toString().isEmpty()){
-                    txtjarak.setText("0");
-                } else if (txtharga.getText().toString().isEmpty()) {
-                    txtharga.setText("0");
-                } else if (txttip.getText().toString().isEmpty()) {
-                    txttip.setText("0");
-                }
                 int voucher =( j*h-((j*h)*10/100) )+t;
                 tvhasil.setText(String.valueOf(voucher));
             }
